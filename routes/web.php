@@ -19,4 +19,6 @@ Route::get('/', function () {
 
 Route::get('/', fn() => view('home'))->name('home');
 Route::get('/about', fn() => view('about'))->name('about');
-Route::get('/gallery', fn () => view('gallery'));
+Route::get('/gallery', fn () => view('gallery', [
+    'titles' => ['Card 1', 'Card 2', 'Card 3']
+]))->name('gallery');
